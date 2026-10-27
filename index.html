@@ -5,19 +5,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      try {
+        var t =
+          localStorage.getItem("tema") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "scuro"
+            : "chiaro");
+        document.documentElement.dataset.tema = t;
+      } catch (e) {}
+    </script>
+    <script src="script.js" defer></script>
     <title>Matteo Aresta Jr. Developer</title>
   </head>
   <body>
+    <div class="progresso"></div>
+    <button type="button" class="tema" id="tema" aria-label="Cambia tema">
+      🌙
+    </button>
     <header class="titolo">
       <h1>MATTEO ARESTA</h1>
       <p class="sottotitolo">
-        <b>Junior Developer & IT Specialist</b>
+        <b>Junior Developer &amp; IT Specialist</b>
       </p>
+      <a class="bottone" href="CV_Matteo_Aresta.pdf" download>Scarica il CV</a>
     </header>
 
     <main class="main">
@@ -27,18 +47,34 @@
       <div class="row">
         <div class="content">
           <p>
-            Ciao! Sono Matteo Aresta, un Junior IT Specialist & Developer con
-            una forte inclinazione sia per la scrittura di codice che per il
+            Ciao! Sono Matteo Aresta, un Junior IT Specialist &amp; Developer
+            con una forte inclinazione sia per la scrittura di codice che per il
             supporto tecnico e la risoluzione di problemi digitali.
           </p>
         </div>
         <div class="image-box">
-          <img src="tuafoto1.jpg" alt="Matteo Aresta al lavoro" />
+          <img src="tuafoto1.jpg" alt="Foto di Matteo Aresta" />
+        </div>
+      </div>
+
+      <!-- numeri -->
+      <div class="numeri">
+        <div>
+          <span class="numero" data-valore="7">7</span
+          ><span>linguaggi e tecnologie web</span>
+        </div>
+        <div>
+          <span class="numero" data-valore="6">6</span
+          ><span>mesi di tirocinio</span>
+        </div>
+        <div>
+          <span class="numero" data-valore="2">2</span
+          ><span>academy seguite</span>
         </div>
       </div>
 
       <!-- approccio -->
-      <div class="row reverse">
+      <div class="row">
         <div class="content">
           <p>
             <b>💡 Il mio approccio: tra Codice e Supporto</b><br />
@@ -59,10 +95,8 @@
             </li>
           </ul>
         </div>
-        <div class="image-box">
-          <img src="tuafoto2.jpg" alt="Approccio IT" />
-        </div>
       </div>
+
       <!-- competenze -->
       <div class="row">
         <div class="content">
@@ -73,28 +107,127 @@
           <section>
             <ul class="competenze">
               <li>
-                <b>Linguaggi:</b> PHP, Java, Python, JavaScript, HTML, CSS, SQL
-                (Oracle/DBMS)
+                <b>Linguaggi</b>
+                <div class="chips">
+                  <span class="chip">PHP</span>
+                  <span class="chip">Java</span>
+                  <span class="chip">Python</span>
+                  <span class="chip">JavaScript</span>
+                  <span class="chip">HTML</span>
+                  <span class="chip">CSS</span>
+                  <span class="chip">SQL (Oracle/DBMS)</span>
+                </div>
               </li>
               <li>
-                <b>Framework & Tech:</b> Spring, Spring Boot, CRM, WordPress.
+                <b>Framework &amp; Tech</b>
+                <div class="chips">
+                  <span class="chip">Spring</span>
+                  <span class="chip">Spring Boot</span>
+                  <span class="chip">CRM</span>
+                  <span class="chip">WordPress</span>
+                </div>
               </li>
               <li>
-                <b>Competenze IT & Supporto:</b> Troubleshooting hardware e
-                software, assistenza applicativa e cliente, gestione feedback e
-                problematiche tecniche, certificazione EIPASS
+                <b>Competenze IT &amp; Supporto</b>
+                <div class="chips">
+                  <span class="chip">Troubleshooting hardware e software</span>
+                  <span class="chip">Assistenza applicativa e cliente</span>
+                  <span class="chip"
+                    >Gestione feedback e problematiche tecniche</span
+                  >
+                  <span class="chip">Certificazione EIPASS</span>
+                </div>
               </li>
               <li>
-                <b>Metodologie & AI:</b> Agile (Scrum), Machine Learning, UI/UX
-                Design
+                <b>Metodologie &amp; AI</b>
+                <div class="chips">
+                  <span class="chip">Agile (Scrum)</span>
+                  <span class="chip">Machine Learning</span>
+                  <span class="chip">UI/UX Design</span>
+                </div>
               </li>
             </ul>
           </section>
         </div>
-        <div class="image-box">
-          <img src="tuafoto1.jpg" alt="Matteo Aresta al lavoro" />
+        <div class="loghi">
+          <div class="logo">
+            <i class="devicon-php-plain colored"></i><span>PHP</span>
+          </div>
+          <div class="logo">
+            <i class="devicon-java-plain colored"></i><span>Java</span>
+          </div>
+          <div class="logo">
+            <i class="devicon-python-plain colored"></i><span>Python</span>
+          </div>
+          <div class="logo">
+            <i class="devicon-javascript-plain colored"></i
+            ><span>JavaScript</span>
+          </div>
+          <div class="logo">
+            <i class="devicon-html5-plain colored"></i><span>HTML</span>
+          </div>
+          <div class="logo">
+            <i class="devicon-css3-plain colored"></i><span>CSS</span>
+          </div>
+          <div class="logo">
+            <i class="devicon-spring-plain colored"></i><span>Spring</span>
+          </div>
+          <div class="logo">
+            <i class="devicon-wordpress-plain colored"></i
+            ><span>WordPress</span>
+          </div>
         </div>
       </div>
+
+      <!-- progetti -->
+      <h2 class="titoloSezione">PROGETTI</h2>
+      <div class="progetti">
+        <article class="card">
+          <h3>Questo sito</h3>
+          <p>Il mio portfolio, scritto a mano per presentarmi alle aziende.</p>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+          </div>
+          <a href="https://github.com/matteoaresta-02">Vedi su GitHub</a>
+        </article>
+        <article class="card">
+          <h3>Narcisoft e Sportsoft</h3>
+          <p>
+            Sviluppo di gestionali personalizzati durante il tirocinio in THCS
+            Srl (feb-lug 2025).
+          </p>
+          <div class="chips">
+            <span class="chip">Sviluppo software</span>
+            <span class="chip">Gestionali</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>ADIgest per l'ASL</h3>
+          <p>
+            Supporto sul gestionale ADIgest, sempre durante il tirocinio in THCS
+            Srl.
+          </p>
+          <div class="chips">
+            <span class="chip">Assistenza applicativa</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Player_Nest</h3>
+          <p>
+            Progetto personale in fase iniziale. Ne condividerò i dettagli man
+            mano che prende forma.
+          </p>
+          <div class="chips">
+            <span class="chip">In sviluppo</span>
+            <span class="chip">Java</span>
+            <span class="chip">Spring boot</span>
+            <span class="chip">React</span>
+          </div>
+        </article>
+      </div>
+
       <!-- cosa cerco -->
       <div class="cosaCerco">
         <div>
@@ -107,14 +240,19 @@
           </p>
           <p>Se sei interessato ti lascio dei miei contatti:</p>
           <ul>
-            <li>Email: matteoaresta02@gmail.com</li>
+            <li class="email">
+              <a id="indirizzo" href="mailto:matteoaresta02@gmail.com"
+                >matteoaresta02@gmail.com</a
+              >
+              <button type="button" id="copia">Copia</button>
+            </li>
             <li>
               <a href="https://www.linkedin.com/in/matteo-aresta-9432062b3">
-                 Profilo Linkedin
+                LinkedIn
               </a>
             </li>
             <li>
-              <a href="https://github.com/matteoaresta-02"> Profilo GitHub </a>
+              <a href="https://github.com/matteoaresta-02">Profilo GitHub</a>
             </li>
           </ul>
         </div>
